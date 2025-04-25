@@ -9,7 +9,7 @@ def updateData(DeviceModel):
 
 if __name__ == "__main__":
     # 拿到设备模型 Get the device model
-    device = device_model.DeviceModel("测试设备", "COM51", 115200, 0x50, updateData)
+    device = device_model.DeviceModel("测试设备", "/dev/ttyUSB0", 9600, 0x50, updateData)
     # 开启设备 Turn on the device
     device.openDevice()
     # 开启轮询 Enable loop reading
